@@ -1,0 +1,99 @@
+/*
+Theme Name: Theme Card Style
+Author: شما
+Description: نمایش مقاله‌ها به صورت کارت با خلاصه، تصویر، دسته، نویسنده و زمان مطالعه
+Version: 1.0
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* برای زبان فارسی */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* نمایش مقاله‌ها به صورت شبکه */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* هر کارت (باکس مقاله) */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* تصویر شاخص */
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* محتوای داخل کارت */
+.card-content {
+    padding: 18px;
+}
+
+/* دسته‌بندی */
+.card-cat {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    color: #2c3e66;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+.card-cat:hover {
+    background: #cfd9e6;
+}
+
+/* عنوان مقاله */
+.card-title {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+.card-title a {
+    text-decoration: none;
+    color: #1e2a3e;
+}
+
+/* متا: نویسنده و زمان مطالعه */
+.card-meta {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 15px;
+}
+
+/* خلاصه متن */
+.card-excerpt {
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* لینک ادامه مطلب */
+.read-more {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: bold;
+}
